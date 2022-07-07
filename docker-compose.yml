@@ -1,0 +1,11 @@
+# tell docker what version of the docker-compose.yml were using
+version: '3'
+
+# start the services section
+services:
+  docker-php-fpm:
+    build: 
+      context: .
+    tty: true
+    ports:
+      - 80:80
