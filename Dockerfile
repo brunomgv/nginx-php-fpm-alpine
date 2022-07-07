@@ -47,7 +47,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Set the workdir
 WORKDIR /var/www/html
 
-# Expose ports 80
+# Expose ports
 EXPOSE 80
 
 # Let supervisord start nginx & php-fpm
