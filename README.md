@@ -6,7 +6,7 @@ This is a Dockerfile to build a alpine based container image running nginx and p
 ### Versioning
 | Docker Tag | GitHub Release | Nginx Version | PHP Version | Alpine Version |\
 |-------|---------------|-------|-------|------|\
-| latest | master Branch |1.22.0 | 7.4.30 | 3.15 |
+| latest | master Branch |1.22.0 | 7.4.30 | 3.16 |
 
 ## Building from source
 To build from source you need to clone the git repo and run docker build:
