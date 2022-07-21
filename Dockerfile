@@ -1,7 +1,7 @@
 # Use php7.4-fpm-alpine official image
 FROM php:7.4-fpm-alpine
 
-# Install nginx and bash
+# Install nginx, bash and supervisor
 RUN apk update && apk add nginx bash supervisor
 
 # Add "install-php-extensions" to install php extensions
@@ -42,7 +42,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     zip
 
 # Configure supervisord
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/supervisord.conf
 
 # Set the workdir
 WORKDIR /var/www/html
@@ -51,7 +51,4 @@ WORKDIR /var/www/html
 EXPOSE 80
 
 # Let supervisord start nginx & php-fpm
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
-
-# Configure a healthcheck to validate that everything is up&running
-HEALTHCHECK --timeout=10s CMD curl --silent --fail http://127.0.0.1/fpm-ping
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
