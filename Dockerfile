@@ -24,6 +24,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     iconv \
     imagick \
     json \
+    memcached \
     mysqli \
     opcache \
     pcntl \
