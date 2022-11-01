@@ -31,6 +31,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     pdo_mysql \
     pgsql \
     posix \
+    redis \
     session \
     shmop \
     soap \
