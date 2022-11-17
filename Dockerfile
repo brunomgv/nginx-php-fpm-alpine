@@ -40,6 +40,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     sysvsem \
     sysvshm \
     tokenizer \
+    xdebug \
     xsl \
     zip
 
